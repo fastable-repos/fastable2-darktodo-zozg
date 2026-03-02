@@ -75,6 +75,16 @@
       setInterval(heartbeat,3000);
     })();
     </script>
+    <script>
+      // Apply dark mode immediately to prevent flash
+      (function() {
+        try {
+          if (localStorage.getItem('darktodo_darkmode') === 'true') {
+            document.documentElement.classList.add('dark');
+          }
+        } catch(e) {}
+      })();
+    </script>
   </head>
   <body>
     <div id="root"></div>
